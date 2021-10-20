@@ -56,6 +56,7 @@ const useFirebase = _ => {
         setEmail,
         setPassword,
         error,
+        setError,
         newSignIn,
         signInUsingEmail,
         signInUsingGoogle,
