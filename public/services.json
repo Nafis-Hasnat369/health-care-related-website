@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/zsB415K/h-custom-icon-1.png",
+        "image2": "https://i.ibb.co/whSRk0p/healthcare-background-with-medical-symbols-in-hexagonal-frame.jpg",
+        "title": "PRIMARY HEALTH CARE",
+        "description": "Primary health care, or PHC, refers to 'essential health care' that is based on scientifically sound and socially acceptable methods and technology."
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/9WcrR1z/h-custom-icon-2.png",
+        "image2": "https://i.ibb.co/7gwpnC4/Family-tree-with-pictures-of-relatives-in-round-frames-on-bare-branches-horizontal-cartoon-vector-il.jpg",
+        "title": "GYNEOLOGICAL CLINIC",
+        "description": "The Gynecology Clinic offers care for females from infancy through menopause and annual exams to complex problems including Fibroids."
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/JpfBnNv/h-custom-icon-3.png",
+        "image2": "https://i.ibb.co/x3fx0Jt/img-detail-3.jpg",
+        "title": "PRECISE DIAGNOSIS",
+        "description": "Precision diagnosis is the accurate and timely explanation of each patient's health problem and further requires communication of that explanation to patients."
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/YctcNN5/h-custom-icon-4.png",
+        "image2": "https://i.ibb.co/B3ZfHbT/img-detail-4.jpg",
+        "title": "CARDIAC CLINIC",
+        "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist."
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/fQ5BJkt/h-custom-icon-5.png",
+        "image2": "https://i.ibb.co/dj7pFDz/img-detail-5.jpg",
+        "title": "DENTAL SURGERY",
+        "description": "Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words, surgery of the teeth, gums and jaw bones"
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/n3Q9scV/h-custom-icon-6.png",
+        "image2": "https://i.ibb.co/30HPNJs/img-detail-6.jpg",
+        "title": "REHABILITATION CENTER",
+        "description": "Rehabilitation hospitals, also referred to as inpatient rehabilitation hospitals, are devoted to the rehabilitation of patients with various neurological acute medical issues."
+    }
+]
