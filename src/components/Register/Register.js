@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory, useLocation } from 'react-router';
 import { Form } from 'react-bootstrap';
@@ -6,7 +6,11 @@ import Button from '@restart/ui/esm/Button';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-    const { setUser, email, password, setEmail, setPassword, error, setError, newSignIn, signInUsingGoogle } = useAuth();
+    const { setUser, error, setError, newSignIn, signInUsingGoogle } = useAuth();
+
+    const [email, setEmail] = useState({});
+    const [password, setPassword] = useState({});
+
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
@@ -14,20 +18,18 @@ const Register = () => {
     // set email
     const handleSetEmail = e => {
         setEmail(e.target.value)
-        console.log(email)
     }
     // set password
     const handleSetPassword = e => {
         setPassword(e.target.value)
-        console.log(password)
     }
     // email sign in
-    const handleEmailSignIn = _ => {
-        newSignIn()
+    const handleSignUp = _ => {
+        newSignIn(email, password)
+        console.log(email, password)
             .then(result => {
                 setUser(result.user)
                 history.push(redirect_uri)
-                console.log(result.user)
             })
             .catch(error => setError(error.message))
     }
@@ -48,9 +50,9 @@ const Register = () => {
     return (
         <div className="d-flex justify-content-center align-items-center">
             <div className="w-25" style={{ height: "80vh" }}>
-                <h2>Login</h2>
+                <h2>Register</h2>
                 {
-                    !error ? <Form >
+                    !error ? <Form onSubmit={handleSignUp} >
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control onBlur={handleSetEmail} type="email" placeholder="Enter email" />
@@ -63,8 +65,8 @@ const Register = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onBlur={handleSetPassword} type="password" placeholder="Password" />
                         </Form.Group>
-                        <Button onClick={handleEmailSignIn} className="btn btn-success" variant="primary" type="submit">
-                            Sign In
+                        <Button onClick={handleSignUp} className="btn btn-success" variant="primary" type="submit">
+                            Sign Up
                         </Button>
                     </Form> : <div>
                         <h2>{error}</h2>

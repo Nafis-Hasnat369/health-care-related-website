@@ -12,6 +12,7 @@ import PageNotFound from './components/404/PageNotFound';
 import Register from './components/Register/Register';
 import Details from './components/Details/Details';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Contact from './components/Contect/Contact';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/about">
               <About />
+            </PrivateRoute>
+            <PrivateRoute path="/contect">
+              <Contact />
             </PrivateRoute>
             <Route path="/login">
               <Login />

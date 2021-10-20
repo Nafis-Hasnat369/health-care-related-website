@@ -1,12 +1,15 @@
 import Button from '@restart/ui/esm/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
-    const { setUser, email, setEmail, setPassword, error, setError, signInUsingEmail, signInUsingGoogle } = useAuth();
+    const { setUser, error, setError, signInUsingEmail, signInUsingGoogle } = useAuth();
+
+    const [email, setEmail] = useState({});
+    const [password, setPassword] = useState({});
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
@@ -19,7 +22,7 @@ const Login = () => {
     }
     const handleSetPassword = e => {
         setPassword(e.target.value)
-        console.log(e.target.value)
+        console.log(password)
     }
     const handleGoogleSignIn = _ => {
         signInUsingGoogle()
@@ -30,8 +33,8 @@ const Login = () => {
             .catch(error => setError(error.message))
     }
 
-    const handleEmailSignIn = _ => {
-        signInUsingEmail()
+    const handleEmailSignIn = (email, password) => {
+        signInUsingEmail(email, password)
             .then(result => {
                 setUser(result.user)
                 history.push(redirect_uri)
@@ -61,7 +64,7 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onBlur={handleSetPassword} type="password" placeholder="Password" />
                         </Form.Group>
-                        <Button onClick={handleEmailSignIn} className="btn btn-success" variant="primary" type="submit">
+                        <Button onClick={handleEmailSignIn} className="btn btn-success" variant="primary">
                             Sign In
                         </Button>
                     </Form> : <div>

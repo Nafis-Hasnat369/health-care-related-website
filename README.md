@@ -1,3 +1,11 @@
+## Welcome to Health City Here you can 
+# => It's Health Related website
+# => Here you can see different services on treatments
+# => You can log in here by using google and email
+# => This website has private routes to handle unwanted information sharing
+# => This website contains multiple survices and you can see there details 
+# => The website can redirect to after you login..   
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

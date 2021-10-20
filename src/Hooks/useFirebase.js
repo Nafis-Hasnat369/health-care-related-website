@@ -8,17 +8,16 @@ firebaseAuthentication();
 
 const useFirebase = _ => {
     const [user, setUser] = useState({});
-    const [email, setEmail] = useState({});
-    const [password, setPassword] = useState({});
     const [error, setError] = useState('');
 
     const auth = getAuth();
 
-    const newSignIn = _ => {
+    const newSignIn = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const signInUsingEmail = _ => {
+    const signInUsingEmail = (email, password) => {
+        console.log(email, password)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -47,9 +46,6 @@ const useFirebase = _ => {
     return {
         user,
         setUser,
-        email,
-        setEmail,
-        setPassword,
         error,
         setError,
         newSignIn,
