@@ -1,11 +1,16 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
+import { useHistory, useLocation } from 'react-router';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
-    const { email, setEmail, setPassword, error, setError, signInUsingEmail, signInUsingGoogle } = useAuth();
+    const { setUser, email, setEmail, setPassword, error, setError, signInUsingEmail, signInUsingGoogle } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+
 
     const handleSetEmail = e => {
         setEmail(e.target.value)
@@ -16,12 +21,34 @@ const Login = () => {
         setPassword(e.target.value)
         console.log(e.target.value)
     }
+    const handleGoogleSignIn = _ => {
+        signInUsingGoogle()
+            .then(result => {
+                setUser(result.user)
+                history.push(redirect_uri);
+            })
+            .catch(error => setError(error.message))
+    }
+
+    const handleEmailSignIn = _ => {
+        signInUsingEmail()
+            .then(result => {
+                setUser(result.user)
+                history.push(redirect_uri)
+                console.log(result.user)
+            })
+            .catch(error => setError(error.message))
+    }
+    const handleTryAgain = _ => {
+        setError("")
+        history.push("/login")
+    }
     return (
         <div className="d-flex justify-content-center align-items-center">
             <div className="w-25" style={{ height: "80vh" }}>
                 <h2>Login</h2>
                 {
-                    !error ? <Form onSubmit={signInUsingEmail}>
+                    !error ? <Form >
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control onBlur={handleSetEmail} type="email" placeholder="Enter email" />
@@ -34,19 +61,19 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onBlur={handleSetPassword} type="password" placeholder="Password" />
                         </Form.Group>
-                        <Button className="btn btn-success" variant="primary" type="submit">
+                        <Button onClick={handleEmailSignIn} className="btn btn-success" variant="primary" type="submit">
                             Sign In
                         </Button>
                     </Form> : <div>
                         <h2>{error}</h2>
-                        <Link to="/login"> <button className="btn btn-warning">Try again</button></Link>
+                        <button onClick={handleTryAgain} className="btn btn-warning">Try again</button>
                     </div>
                 }
                 <div className="m-3">
                     <small>New here?</small> <Link to="/register"> <button className="btn btn-warning">Sign Up</button></Link>
                 </div>
                 <div>---------------or--------------</div>
-                <button onClick={signInUsingGoogle} className="btn btn-dark">Google Sign In</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-dark">Google Sign In</button>
             </div>
         </div>
     );

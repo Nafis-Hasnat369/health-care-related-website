@@ -21,16 +21,12 @@ const useFirebase = _ => {
     }
 
     const signInUsingEmail = _ => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => setUser(result.user))
-            .catch(error => setError(error.message))
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     const signInUsingGoogle = _ => {
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => setUser(result.user))
-            .catch(error => setError(error.message))
+        return signInWithPopup(auth, googleProvider);
     }
 
     useEffect(() => {
@@ -52,6 +48,7 @@ const useFirebase = _ => {
 
     return {
         user,
+        setUser,
         email,
         setEmail,
         setPassword,
