@@ -4,41 +4,41 @@
         "image": "https://i.ibb.co/zsB415K/h-custom-icon-1.png",
         "image2": "https://i.ibb.co/whSRk0p/healthcare-background-with-medical-symbols-in-hexagonal-frame.jpg",
         "title": "PRIMARY HEALTH CARE",
-        "description": "Primary health care, or PHC, refers to 'essential health care' that is based on scientifically sound and socially acceptable methods and technology."
+        "description": "Primary healthcare refers to a broad range of health services provided by medical professionals in the community. ... Primary healthcare is the provision of health services, including diagnosis and treatment of a health condition, and support in managing long-term healthcare, including chronic conditions like diabetes."
     },
     {
         "id": 2,
         "image": "https://i.ibb.co/9WcrR1z/h-custom-icon-2.png",
         "image2": "https://i.ibb.co/7gwpnC4/Family-tree-with-pictures-of-relatives-in-round-frames-on-bare-branches-horizontal-cartoon-vector-il.jpg",
         "title": "GYNEOLOGICAL CLINIC",
-        "description": "The Gynecology Clinic offers care for females from infancy through menopause and annual exams to complex problems including Fibroids."
+        "description": "Gynaecology or gynecology is the medical practice dealing with the health of the female reproductive system. Almost all modern gynaecologists are also obstetricians. In many areas, the specialities of gynaecology and obstetrics overlap. The term means 'the science of women'."
     },
     {
         "id": 3,
         "image": "https://i.ibb.co/JpfBnNv/h-custom-icon-3.png",
         "image2": "https://i.ibb.co/x3fx0Jt/img-detail-3.jpg",
         "title": "PRECISE DIAGNOSIS",
-        "description": "Precision diagnosis is the accurate and timely explanation of each patient's health problem and further requires communication of that explanation to patients."
+        "description": "Precision diagnosis is the accurate and timely explanation of each patient's health problem and further requires communication of that explanation to patients and surrogate decision-makers. Both accuracy and timeliness are essential to critical care, yet computed decision support systems (CDSS) are scarce."
     },
     {
         "id": 4,
         "image": "https://i.ibb.co/YctcNN5/h-custom-icon-4.png",
         "image2": "https://i.ibb.co/B3ZfHbT/img-detail-4.jpg",
         "title": "CARDIAC CLINIC",
-        "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist."
+        "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist.In summary, there is a difference between a heart attack and a cardiac arrest. A heart attack occurs when the blood supply to part of the heart stops and thus causes a section of the heart muscle to begin to die; whereas a cardiac arrest occurs when the heart stops beating as a whole."
     },
     {
         "id": 5,
         "image": "https://i.ibb.co/fQ5BJkt/h-custom-icon-5.png",
         "image2": "https://i.ibb.co/dj7pFDz/img-detail-5.jpg",
         "title": "DENTAL SURGERY",
-        "description": "Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words, surgery of the teeth, gums and jaw bones"
+        "description": "Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words, surgery of the teeth, gums and jaw bones Dentists inject anesthetic to block sensory transmission by the alveolar nerves. The superior alveolar nerves are not usually anesthetized directly because they are difficult to approach with a needle. For this reason, the maxillary teeth are usually anesthetized locally by inserting the needle beneath the oral mucosa surrounding the teeth. The inferior alveolar nerve is probably anesthetized more often than any other nerve in the body. To anesthetize this nerve, the dentist inserts the needle somewhat beyond the patient’s last molar."
     },
     {
         "id": 6,
         "image": "https://i.ibb.co/n3Q9scV/h-custom-icon-6.png",
         "image2": "https://i.ibb.co/30HPNJs/img-detail-6.jpg",
         "title": "REHABILITATION CENTER",
-        "description": "Rehabilitation hospitals, also referred to as inpatient rehabilitation hospitals, are devoted to the rehabilitation of patients with various neurological acute medical issues."
+        "description": "Rehabilitation hospitals, also referred to as inpatient rehabilitation hospitals, are devoted to the rehabilitation of patients with various neurological acute medical issues.For individuals looking for rehabilitation options for themselves or a loved one following certain medical events, understanding what services rehabilitation hospitals offer and how they compare to other treatment centers is an important part of making the right treatment decision."
     }
 ]

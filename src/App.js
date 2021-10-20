@@ -4,22 +4,49 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
+import AuthProvider from './contexts/AuthProvider';
+import Services from './components/Services/Services';
+import About from './components/About/About';
+import Login from './components/Login/Login';
+import PageNotFound from './components/404/PageNotFound';
+import Register from './components/Register/Register';
+import Details from './components/Details/Details';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/services">
+              <Services />
+            </Route>
+            <Route path="/details/:id">
+              <Details />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
