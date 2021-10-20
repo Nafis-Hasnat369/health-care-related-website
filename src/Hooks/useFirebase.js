@@ -15,9 +15,7 @@ const useFirebase = _ => {
     const auth = getAuth();
 
     const newSignIn = _ => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => setUser(result.user))
-            .catch(error => setError(error.message))
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const signInUsingEmail = _ => {
